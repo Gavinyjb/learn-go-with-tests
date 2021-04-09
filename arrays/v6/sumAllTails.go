@@ -1,4 +1,4 @@
-package arrays
+package main
 
 func Sum(numbers []int) int {
 	sum := 0
@@ -13,7 +13,12 @@ func Sum(numbers []int) int {
 }
 func SumAllTails(numbersToSum ...[]int) (sums []int) {
 	for _, numbers := range numbersToSum {
-		sums = append(sums, Sum(numbers[1:]))
+		if len(numbers) == 0 {
+			sums = append(sums, 0)
+		} else {
+			sums = append(sums, Sum(numbers[1:]))
+		}
+
 	}
 	return sums
 }
