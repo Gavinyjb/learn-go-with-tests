@@ -204,3 +204,17 @@ func (c Circle)Area() float64 {
 > ```
 > r Rectangle
 > ```
+
+## 关于同步 sync
+
+```
+同步这一章节也是有趣的，
+
+sync.WaitGroup是等待 goroutines 完成工作的一种方式
+sync.WaitGroup.Add(num int) 可以用来等待num数量的线程
+
+sync.Mutex 允许我们在数据中添加锁 
+
+还应该注意加锁的数据应该避免值传递 因为会复制 而应该采用引用传递
+```
+
